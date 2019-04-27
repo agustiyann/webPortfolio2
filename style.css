@@ -1,0 +1,178 @@
+.navbar-brand{
+	font-family: Coiny;
+	font-size: 30px;
+}
+
+nav{
+	transition: 1s;
+}
+
+nav.black {
+	background: #000;
+	color: #fff;
+}
+.container .naruto{
+	width: 50px;
+	animation: anim 2s ease-in-out infinite;
+	position: absolute;
+	margin-top: 100px;
+	right: 300px;
+}
+
+@keyframes anim{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-100px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+.jumbotron{
+	background-image: url(img/konoha.jpg);
+	background-size: 100% 500px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 500px;
+}
+
+.pLeft, .pRight{
+	transform: translateX(-50px);
+	opacity: 0;
+	transition: 1s;
+}
+.pRight{
+	transform: translateX(50px);
+}
+.pLeft.muncul, .pRight.muncul{
+	transform: translate(0);
+	opacity: 1;
+}
+
+.kartu-skill{
+	width: 70%;
+	padding: 20px;
+	background: #333;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+	margin: 5px auto;
+}
+
+.skill-box{
+	box-sizing: border-box;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.skill-box p{
+	color: #fff;
+	margin: 0 0 10px;
+	padding: 0;
+	font-family: bold;
+	letter-spacing: 1px;
+}
+.skill-box p:nth-child(2){
+	float: right;
+	position: relative;
+	top: -25px;
+}
+.skill{
+	background-color: #262626;
+	padding: 4px;
+	box-sizing: border-box;
+	border: 1px solid #0fffb7;
+	border-radius: 2px;
+}
+.skill-level{
+	background: #0fffb7;
+	width: 100%;
+	height: 10px;
+}
+
+.portfolio{
+	background: #1abc9c;
+}
+
+.portfolio .card{
+	transform: translateY(40px);
+	opacity: 0;
+	transition: 1s;
+}
+
+.portfolio .card.cardUp{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.col-lg-4 .box{
+	position: relative;
+	width: 300px;
+	height: 100px;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 10px;
+}
+.col-lg-4 .box .icon{
+	width: 100%;
+	height: 100%;
+	background: #151515;
+	transition: 0.5s;
+	transform-origin: top;
+	transform: translateY(0) rotateX(0deg);
+}
+
+.col-lg-4 .box:hover .icon{
+	transform: translateY(100%) rotateX(90deg);
+}
+
+.col-lg-4 .box .icon .fa{
+	font-size: 4em;
+	line-height: 100px;
+	color: #999;
+}
+.col-lg-4 .box .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #03a9f4;
+	transition: 0.5s;
+	transform-origin: bottom;
+	transform: translateY(-100px) rotateX(90deg);
+}
+.col-lg-4 .box:hover .details{
+	transform: translateY(0) rotateX(0deg);
+}
+.col-lg-4 .box .details h3{
+	margin: 0;
+	padding: 0;
+	line-height: 100px;
+	font-size: 24px;
+	color: #fff;
+	font-family: sans-serif;
+}
+.col-lg-4 .box:nth-child(2) .details{
+	background: #e91e63;
+}
+.col-lg-4 .box:nth-child(3) .details{
+	background: #8bc43a;
+}
+
+.agt{
+	color: white;
+	text-decoration: none;
+}
+/* dekstop */
+@media (min-width: 992px) {
+	.jumbotron{
+		/*height: 100vh;*/
+	}
+	.container .naruto{
+		width: 100px;
+	}
+	
+}
